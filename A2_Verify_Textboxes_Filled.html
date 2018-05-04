@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            function check_empty() {
+                var a=new Array();
+                for(i=0; i<document.f1.length; i++) {
+                    if(document.f1.elements[i].value.length == 0) {
+                        a.push(document.f1.elements[i].name);
+                    }
+                }
+                
+                if(a.length != 0) {
+                    alert("The following textboxes are empty: "+a+"//a.length: "+a.length);
+                }
+                else {
+                    alert("All textboxes have been filled");
+                }
+            }        
+        </script>
+    </head>
+    <body>
+        <pre>
+            <form name="f1">
+                Name: <input type="text" name="std-name">
+
+                Age: <input type="text" name="std-name">
+
+                Branch: <input type="text" name="std-name">
+
+                <input type="submit" value="Check" onclick="check_empty()">
+            </form>
+        </pre>
+    </body>
+</html>
